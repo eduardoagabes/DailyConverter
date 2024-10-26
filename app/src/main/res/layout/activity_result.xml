@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".ResultActivity">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/tv_title"
+        android:textColor="@color/coffee"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:layout_marginTop="22dp"
+        android:text="El resultado de la conversión es:"
+        android:textColor="@color/cream"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:textColor="@color/coffee"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:text="0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_kg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/beige"
+        app:boxStrokeColor="@color/coffee"
+        app:cursorColor="@color/coffee"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_Weigth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Peso"
+            android:inputType="number"
+            android:textColor="@color/coffee" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_medicion_entrada_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/medicion_de_entrada"
+        android:textColor="@color/cream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_kg"
+        />
+
+    <TextView
+        android:id="@+id/tv_medicion_salida_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/medicion_de_salida"
+        android:textColor="@color/cream"
+         />
+
+    <Spinner
+        android:id="@+id/spinnerWeight1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Spinner
+        android:id="@+id/spinnerWeight2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/beige"
+        app:boxStrokeColor="@color/coffee"
+        app:cursorColor="@color/coffee"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerWeight2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Distancia"
+            android:inputType="number"
+            android:textColor="@color/coffee" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_entrada_distance_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/medicion_de_entrada"
+        android:textColor="@color/cream"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerDistance1"
+        app:layout_constraintStart_toStartOf="@+id/spinnerDistance1"
+        app:layout_constraintTop_toBottomOf="@+id/til_distance" />
+
+    <TextView
+        android:id="@+id/tv_distance_salida_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/medicion_de_salida"
+        android:textColor="@color/cream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spinnerDistance2"
+        app:layout_constraintTop_toBottomOf="@+id/til_distance" />
+
+    <Spinner
+        android:id="@+id/spinnerDistance1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_entrada_distance_label" />
+
+    <Spinner
+        android:id="@+id/spinnerDistance2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance_salida_label" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/beige"
+        app:boxStrokeColor="@color/coffee"
+        app:cursorColor="@color/coffee"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDistance1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Volume"
+            android:inputType="number"
+            android:textColor="@color/coffee" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_entrada_volume_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/medicion_de_entrada"
+        android:textColor="@color/cream"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerVolume1"
+        app:layout_constraintStart_toStartOf="@+id/spinnerVolume1"
+        app:layout_constraintTop_toBottomOf="@+id/til_volume" />
+
+    <TextView
+        android:id="@+id/tv_volume_salida_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/medicion_de_salida"
+        android:textColor="@color/cream"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerVolume2"
+        app:layout_constraintStart_toStartOf="@+id/spinnerVolume2"
+        app:layout_constraintTop_toBottomOf="@+id/til_volume" />
+
+    <Spinner
+        android:id="@+id/spinnerVolume1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_entrada_volume_label" />
+
+    <Spinner
+        android:id="@+id/spinnerVolume2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_volume_salida_label" />
+
+    <Button
+        android:id="@+id/btn_converter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/coffee"
+        android:text="Converter"
+        android:textColor="@color/beige"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl_center"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_clean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/beige"
+        android:text="Limpiar"
+        android:textColor="@color/coffee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_center" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
