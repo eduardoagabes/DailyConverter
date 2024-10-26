@@ -6,7 +6,7 @@
     <item name="tv_volume_salida_label" type="id" />
     <item name="spinnerVolume2" type="id" />
     <item name="tv_entrada_volume_label" type="id" />
-    <item name="tv_result" type="id" />
+    <item name="tv_resultado" type="id" />
     <item name="til_kg" type="id" />
     <item name="tie_Weigth" type="id" />
     <item name="tv_medicion_entrada_label" type="id" />

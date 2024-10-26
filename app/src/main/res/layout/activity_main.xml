@@ -39,9 +39,8 @@
         android:id="@+id/ic_main"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginBottom="14dp"
         android:src="@drawable/ic_main"
-        app:layout_constraintBottom_toTopOf="@+id/tv_description"
+        app:layout_constraintBottom_toTopOf="@+id/tv_description_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout">
@@ -49,7 +48,7 @@
     </ImageView>
 
     <TextView
-        android:id="@+id/tv_description"
+        android:id="@+id/tv_description_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

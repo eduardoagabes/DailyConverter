@@ -26,10 +26,10 @@ class ResultActivity : AppCompatActivity() {
             insets
         }
 
-        val tvResult = binding.tvResult
+        val tvResult = binding.tvResultado
         val tieWeight = binding.tieWeigth
         val tieDistance = binding.tieDistance
-        val tieVolume= binding.tieVolume
+        val tieVolume = binding.tieVolume
 
         ArrayAdapter.createFromResource(
             this,
@@ -98,7 +98,7 @@ class ResultActivity : AppCompatActivity() {
                     Snackbar.LENGTH_LONG
                 ).show()
 
-            } else if(inputWeight.isNotEmpty()) {
+            } else if (inputWeight.isNotEmpty()) {
                 val fromWeightUnit = binding.spinnerWeight1.selectedItem.toString()
                 val toWeightUnit = binding.spinnerWeight2.selectedItem.toString()
                 val weightValue = inputWeight.toDouble()
@@ -110,7 +110,8 @@ class ResultActivity : AppCompatActivity() {
                 val fromDistanceUnit = binding.spinnerDistance1.selectedItem.toString()
                 val toDistanceUnit = binding.spinnerDistance2.selectedItem.toString()
                 val distanceValue = inputDistance.toDouble()
-                val distanceResult = convertDistance(distanceValue, fromDistanceUnit, toDistanceUnit)
+                val distanceResult =
+                    convertDistance(distanceValue, fromDistanceUnit, toDistanceUnit)
                 tvResult.text = "$distanceResult"
             }
 
@@ -201,3 +202,4 @@ class ResultActivity : AppCompatActivity() {
             else -> baseValue
         }
     }
+}
